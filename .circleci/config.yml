@@ -10,3 +10,4 @@ jobs:
           command: |
             echo 'Test YJ project'
             echo 'Test YJ2 project'
+            ls -l
