@@ -20,6 +20,4 @@ jobs:
       - checkout
       - run:
           name: runing test
-          environment:
-            env: 'dev'
-          command: npm run ${env}
+          command: npm run $env
