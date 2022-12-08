@@ -12,7 +12,7 @@ jobs:
   #           docker build -t smallwhitetw/backofficeweb:last .
   #           docker push smallwhitetw/backofficeweb:last
 
-  run_test:
+  build:
     docker:
       - image: smallwhitetw/backofficeweb:last
 
