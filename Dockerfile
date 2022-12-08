@@ -3,6 +3,7 @@ FROM node:lts-alpine as build-stage
 WORKDIR /app
 COPY package.json ./
 RUN npm install --legacy-peer-deps
+RUN npm i vite@3.1.8
 COPY . .
 
 ARG BUILD_ENV

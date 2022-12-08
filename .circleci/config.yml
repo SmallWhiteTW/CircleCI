@@ -20,4 +20,4 @@ jobs:
       - checkout
       - run:
           name: runing test
-          command: npm run $env
+          command: echo "build success"
