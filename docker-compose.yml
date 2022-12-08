@@ -3,7 +3,7 @@ version: "3"
 
 services:
   preh5:
-    image: docker.coverspick.com/go/backofficeweb
+    image: smallwhitetw/backofficeweb:last
     container_name: backofficeweb
     hostname: backofficeweb
     restart: always

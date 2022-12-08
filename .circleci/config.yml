@@ -1,0 +1,11 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: centos:latest
+
+    steps:
+      - run:
+          name: First Step
+          commadn: |
+            echo 'Test YJ project'
