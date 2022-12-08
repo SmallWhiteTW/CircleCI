@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     machine:
-      image: docker:rc
+      - image: docker:rc
 
     steps:
       - checkout
