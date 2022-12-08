@@ -9,3 +9,4 @@ jobs:
           name: First Step
           commadn: |
             echo 'Test YJ project'
+            echo 'Test YJ2 project'
