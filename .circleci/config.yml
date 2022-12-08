@@ -7,6 +7,6 @@ jobs:
     steps:
       - run:
           name: First Step
-          commadn: |
+          command: |
             echo 'Test YJ project'
             echo 'Test YJ2 project'
