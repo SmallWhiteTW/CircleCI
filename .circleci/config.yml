@@ -1,16 +1,16 @@
 version: 2.1
 jobs:
-  build:
-    docker:
-      - image: docker:rc
+  # build:
+  #   docker:
+  #     - image: docker:rc
 
-    steps:
-      - checkout
-      - run:
-          name: Build Dockerfile
-          command: |
-            docker build -t smallwhitetw/backofficeweb:last .
-            docker push smallwhitetw/backofficeweb:last
+  #   steps:
+  #     - checkout
+  #     - run:
+  #         name: Build Dockerfile
+  #         command: |
+  #           docker build -t smallwhitetw/backofficeweb:last .
+  #           docker push smallwhitetw/backofficeweb:last
 
   run_test:
     docker:
