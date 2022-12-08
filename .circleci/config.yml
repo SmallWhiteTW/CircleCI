@@ -17,6 +17,7 @@ jobs:
       - image: smallwhitetw/backofficeweb:last
 
     steps:
+      - checkout
       - run:
           name: runing test
           environment:
