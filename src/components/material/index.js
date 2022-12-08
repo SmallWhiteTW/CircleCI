@@ -1,0 +1,13 @@
+export { default as MaterialAlert } from "./MaterialAlert.vue";
+export { default as MaterialAvatar } from "./MaterialAvatar.vue";
+export { default as MaterialBadge } from "./MaterialBadge.vue";
+export { default as MaterialButton } from "./MaterialButton.vue";
+export { default as MaterialCheckbox } from "./MaterialCheckbox.vue";
+export { default as MaterialInput } from "./MaterialInput.vue";
+export { default as MaterialPagination } from "./MaterialPagination.vue";
+export { default as MaterialPaginationItem } from "./MaterialPaginationItem.vue";
+export { default as MaterialProgress } from "./MaterialProgress.vue";
+export { default as MaterialRadio } from "./MaterialRadio.vue";
+export { default as MaterialSnackbar } from "./MaterialSnackbar.vue";
+export { default as MaterialSwitch } from "./MaterialSwitch.vue";
+export { default as MaterialTextarea } from "./MaterialTextarea.vue";
