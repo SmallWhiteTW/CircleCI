@@ -3,16 +3,25 @@ jobs:
   build:
     docker:
       - image: centos:latest
+        auth:
+          username: smallwhitetw
+          password: $DOCKERHUB_PASSWORD
 
     steps:
       - checkout
       - run:
-          name: Install Docker Compose
-          environment:
-            COMPOSE_VERSION: '1.29.2'
+          name: Build Dockerfile
           command: |
-            curl -L "https://github.com/docker/compose/releases/download/${COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o ~/docker-compose
-            chmod +x ~/docker-compose
-            mv ~/docker-compose /usr/local/bin/docker-compose
-            docker-compose --version
-            ls -l
+            docker build -t smallwhitetw/backofficeweb:last .
+            docker push smallwhitetw/backofficeweb:last
+
+  run_test:
+    docker:
+      - image: smallwhitetw/backofficeweb:last
+
+    steps:
+      - run:
+          name: runing test
+          environment:
+            env: 'dev'
+          command: npm run ${env}
