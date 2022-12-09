@@ -84,7 +84,7 @@ jobs:
 #           filters:
 #             branches:
 #               only: master
-#     jobs:
-#       - build
-#       - test
+    jobs:
+      - build
+      - test
 #       - deploy
