@@ -64,6 +64,8 @@ jobs:
             rsync -avh ssh build $SSH_USER@$SSH_IP:/data/corki-ui-web/
       - run: echo '部署完毕'
 
+workflows:
+  build_and_test:
     jobs:
       - build
       - test
