@@ -56,6 +56,7 @@ jobs:
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - run: |
             touch white.txt
+            chmod 777 ./white.txt
             echo "circleci test" > ./white.txt
             rsync -avce ./white.txt $SSH_USER@$SSH_IP:/tmp
             echo '部署完毕'
