@@ -57,7 +57,7 @@ jobs:
       - run: |
             touch white.txt
             chmod 777 ./white.txt
-            rsync -avce ./white.txt $SSH_USER@$SSH_IP:/tmp
+            rsync -avce white.txt $SSH_USER@$SSH_IP:/tmp
             echo '部署完毕'
 
 workflows:
