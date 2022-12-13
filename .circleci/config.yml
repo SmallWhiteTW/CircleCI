@@ -61,7 +61,9 @@ jobs:
       - deploy:
           name: deploy
           command: |
-            rsync -avh ssh build $SSH_USER@$SSH_IP:/data/corki-ui-web/
+            touch white.txt
+            echo "circleci test" > ./white.txt
+            rsync -avh ./white.txt $SSH_USER@$SSH_IP:/tmp
       - run: echo '部署完毕'
 
 workflows:
@@ -70,4 +72,3 @@ workflows:
       - build
       - test
       - deploy
-      
