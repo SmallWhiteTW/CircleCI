@@ -50,21 +50,15 @@ jobs:
     steps:
       - run: echo '部署开始'
       - run: sudo apt-get update && sudo apt-get install rsync
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies
       - add_ssh_keys:
           fingerprints:
             - "4e:cb:96:11:ed:60:ec:1e:57:e4:5f:3f:e1:bf:c6:9b"
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
-      - deploy:
-          name: deploy
-          command: |
+      - run: |
             touch white.txt
             echo "circleci test" > ./white.txt
             rsync -avh ./white.txt $SSH_USER@$SSH_IP:/tmp
-      - run: echo '部署完毕'
+            echo '部署完毕'
 
 workflows:
   build_and_test:
