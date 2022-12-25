@@ -51,7 +51,7 @@ jobs:
       - checkout
       - run: echo '部署开始'
       - run: sudo apt-get update && sudo apt-get install rsync
-      - run: apt install sshpass
+      - run: sudo apt install sshpass
       - add_ssh_keys:
           fingerprints:
             - "4e:cb:96:11:ed:60:ec:1e:57:e4:5f:3f:e1:bf:c6:9b"
