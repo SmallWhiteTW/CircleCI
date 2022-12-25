@@ -51,13 +51,14 @@ jobs:
       - checkout
       - run: echo '部署开始'
       - run: sudo apt-get update && sudo apt-get install rsync
+      - run: apt install sshpass
       - add_ssh_keys:
           fingerprints:
             - "4e:cb:96:11:ed:60:ec:1e:57:e4:5f:3f:e1:bf:c6:9b"
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - run: |
             ls -l
-            rsync -avz -e "ssh" --progress README.md $SSH_USER@$SSH_IP:/tmp
+            sshpass -p $PASSA scp README.md ubuntu@$SSH_IP:/tmp
             echo '部署完毕'
 
 workflows:
