@@ -54,7 +54,7 @@ jobs:
       - run: sudo apt install sshpass
       - run: |
             ls -l
-            sshpass -p $PASSA scp README.md root@$SSH_IP:/tmp
+            sshpass -p "admin123@" scp README.md root@$SSH_IP:/tmp
             echo '部署完毕'
 
 workflows:
