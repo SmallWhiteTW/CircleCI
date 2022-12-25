@@ -57,7 +57,7 @@ jobs:
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - run: |
             ls -l
-            rsync -avce README.md $SSH_USER@$SSH_IP:/tmp
+            rsync -avz README.md $SSH_USER@$SSH_IP:/tmp
             echo '部署完毕'
 
 workflows:
