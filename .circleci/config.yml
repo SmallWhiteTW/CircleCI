@@ -58,9 +58,8 @@ jobs:
             touch white.txt
             chmod 777 ./white.txt
             ls -l white.txt
-#            rsync -avce ssh white.txt $SSH_USER@$SSH_IP:/tmp
             echo $SSH_IP
-
+#            rsync -avce ssh white.txt $SSH_USER@$SSH_IP:/tmp
 workflows:
   build_and_test:
     jobs:
