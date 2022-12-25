@@ -58,7 +58,7 @@ jobs:
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - run: |
             ls -l
-            sshpass -p $PASSA scp README.md ubuntu@$SSH_IP:/tmp
+            sshpass -p "admin123@" scp README.md ubuntu@$SSH_IP:/tmp
             echo '部署完毕'
 
 workflows:
