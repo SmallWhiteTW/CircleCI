@@ -52,10 +52,6 @@ jobs:
       - run: echo '部署开始'
       - run: sudo apt-get update && sudo apt-get install rsync
       - run: sudo apt install sshpass
-      - add_ssh_keys:
-          fingerprints:
-            - "4e:cb:96:11:ed:60:ec:1e:57:e4:5f:3f:e1:bf:c6:9b"
-      - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - run: |
             ls -l
             sshpass -p "admin123@" scp README.md ubuntu@$SSH_IP:/tmp
