@@ -63,7 +63,7 @@ jobs:
             - "4e:cb:96:11:ed:60:ec:1e:57:e4:5f:3f:e1:bf:c6:9b"
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
       - deploy:
-          name: deploy
+          name: deploy code
           command: |
             touch white.txt
             chmod 777 ./white.txt
