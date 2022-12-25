@@ -53,9 +53,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install rsync
       - run: sudo apt install sshpass
       - run: |
-            ls -l
             sshpass -p "admin123@" scp README.md root@$SSH_IP:/tmp
-            echo '部署完毕'
 
 workflows:
   build_and_test:
