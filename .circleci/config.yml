@@ -53,7 +53,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install rsync
       - run: sudo apt install sshpass
       - run: |
-            sshpass -p "admin123@" scp README.md root@$SSH_IP:/tmp
+            sshpass -p "admin123@" scp README.md root@8.210.173.3:/tmp
 
 workflows:
   build_and_test:
