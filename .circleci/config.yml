@@ -48,6 +48,7 @@ jobs:
       - image: circleci/node:latest
     working_directory: ~/circleci-demo-workflows
     steps:
+      - checkout
       - run: echo '部署开始'
       - run: sudo apt-get update && sudo apt-get install rsync
       - add_ssh_keys:
